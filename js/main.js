@@ -15,6 +15,12 @@
    limitations under the License.
 */
 
+$('#submit').click(function () {
+    debugger;
+    var selectedFile = $('#imglink').val();
+    $('#player').attr("background-image", selectedFile);
+});
+
 var debugmode = false;
 
 var states = Object.freeze({
