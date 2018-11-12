@@ -19,6 +19,9 @@ $('#submit').click(function () {
     debugger;
     var selectedFile = $('#imglink').val();
     $('#player').attr("background-image", selectedFile);
+    $.get(location.href).then(function(page) {
+    $("#player").html($(page).find("#player").html())
+    })
 });
 
 var debugmode = false;
