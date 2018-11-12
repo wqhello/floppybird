@@ -18,10 +18,8 @@
 $('#submit').click(function () {
     debugger;
     var selectedFile = $('#imglink').val();
-    $('#player').attr("background-image", selectedFile);
-    $.get(location.href).then(function(page) {
-    $("#player").html($(page).find("#player").html())
-    })
+    $('#player').attr('background-image', selectedFile);
+    $('#player').load(location.href + ' #player');
 });
 
 var debugmode = false;
