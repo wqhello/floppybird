@@ -19,7 +19,7 @@ $('#submit').click(function () {
     debugger;
     var selectedFile = $('#imglink').val();
     $('#player').attr('background-image', selectedFile);
-    $('#player').load(document.href + ' #player');
+    $('#player').load(document.href + '#player');
 });
 
 var debugmode = false;
