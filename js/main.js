@@ -28,8 +28,9 @@ $('#f').on('change', function(ev) {
     
     fr.onload = function(ev2) {
         console.dir(ev2);
-        $('#i').attr('src', ev2.target.result);
         $('#logo').attr('src', ev2.target.result);
+        $('#logo').attr('width', '35px');
+        $('#logo').attr('height', '35px');
     };
     
     fr.readAsDataURL(f);
