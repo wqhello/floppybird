@@ -15,11 +15,23 @@
    limitations under the License.
 */
 
-$('#submit').click(function () {
-    debugger;
-    var selectedFile = $('#imglink').val();
-    $('#player').attr('background-image', selectedFile);
-    $('#player').load(document.href + " #player>*", "");
+// $('#submit').click(function () {
+//     debugger;
+//     var selectedFile = $('#imglink').val();
+//     $('#player').attr('background-image', selectedFile);
+//     $('#player').load(document.href + " #player>*", "");
+// });
+
+$('#f').on('change', function(ev) {
+    var f = ev.target.files[0];
+    var fr = new FileReader();
+    
+    fr.onload = function(ev2) {
+        console.dir(ev2);
+        $('#i').attr('src', ev2.target.result);
+    };
+    
+    fr.readAsDataURL(f);
 });
 
 var debugmode = false;
