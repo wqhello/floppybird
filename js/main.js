@@ -29,7 +29,7 @@ $('#f').on('change', function(ev) {
     fr.onload = function(ev2) {
         console.dir(ev2);
         $('#i').attr('src', ev2.target.result);
-        $('#player').attr('background-image', ev2.target.result);
+        $('#player').attr('src', ev2.target.result);
     };
     
     fr.readAsDataURL(f);
